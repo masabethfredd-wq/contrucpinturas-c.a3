@@ -1,61 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstruCPinturas C.A. | Mezcla de Colores Personalizada</title>
 
-<title>ConstruCPinturas C.A.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-<link rel="stylesheet" href="styles.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-<!-- Tailwind opcional -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración Tailwind -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9c806",
+                        "brand-dark": "#1e293b",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Montserrat", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
+<body class="dark:bg-background-dark dark:text-gray-100">
 
-<body>
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-gray-100 dark:border-gray-800 dark:bg-background-dark/90">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-24">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-2.5 rounded-xl shadow-sm">
+                    <span class="material-symbols-outlined text-background-dark font-bold block">format_paint</span>
+                </div>
+                <h2 class="text-2xl font-800 tracking-tighter uppercase dark:text-white">ConstruC<span class="text-primary">Pinturas</span></h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#inicio">Inicio</a>
+                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#nosotros">Nosotros</a>
+                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#productos">Productos</a>
+                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#servicios">Servicios</a>
+                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#mezcla">Mezcla Personalizada</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-brand-dark text-white dark:bg-primary dark:text-brand-dark px-7 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Ver Catálogo
+                </button>
+            </div>
+        </div>
+    </header>
 
-<header class="nav">
-  <div class="logo">
-    🎨 ConstruCPinturas
-  </div>
+    <!-- Main -->
+    <main>
+        <!-- Hero -->
+        <section id="inicio" class="relative h-screen flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 hero-gradient z-10"></div>
+                <img src="assets/img/hero.jpg" alt="Imagen genérica Hero" class="w-full h-full object-cover scale-105">
+            </div>
+            <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center gap-2 py-2 px-4 bg-primary text-brand-dark rounded-full text-xs font-800 uppercase tracking-[0.2em] mb-8 shadow-xl">
+                        Calidad Profesional Garantizada
+                    </span>
+                    <h1 class="text-6xl lg:text-8xl font-800 text-white leading-none mb-8 tracking-tight">
+                        Con Color <br/><span class="text-primary italic">Todo es Mejor</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 mb-12 leading-relaxed max-w-xl font-light">
+                        Fabricación y distribución de pinturas de alta gama en Valencia. Protegemos y embellecemos sus espacios con tecnología de recubrimiento de vanguardia.
+                    </p>
+                    <div class="flex flex-wrap gap-5">
+                        <button class="bg-primary text-brand-dark px-10 py-5 rounded-2xl font-800 text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-primary/40 transition-all hover:-translate-y-1">
+                            Explorar Productos
+                        </button>
+                        <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-800 text-sm uppercase tracking-widest hover:bg-white/20 transition-all">
+                            Nuestra Fábrica
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#mezcla">Mezcla</a>
-  </nav>
+        <!-- Secciones de Nosotros, Productos, Servicios y Mezcla Personalizada se pueden agregar aquí siguiendo la misma estructura -->
 
-  <button id="modeToggle">🌙</button>
-</header>
+    </main>
 
-<section class="hero">
-  <h1>Con Color Todo es Mejor</h1>
-  <p>Pinturas profesionales para cada proyecto.</p>
-  <button class="btn-primary">Explorar productos</button>
-</section>
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-24 pb-12 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <p class="text-[10px] font-medium tracking-widest uppercase">© 2024 ConstruCPinturas C.A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-<section id="mezcla" class="color-lab">
-  <h2>Laboratorio de color</h2>
-
-  <div class="palette">
-    <div class="color" style="background:#FAD02E"></div>
-    <div class="color" style="background:#E34234"></div>
-    <div class="color" style="background:#0047AB"></div>
-    <div class="color" style="background:#50C878"></div>
-    <div class="color" style="background:#000"></div>
-  </div>
-
-  <div id="preview"></div>
-</section>
-
-<footer>
-  © 2024 ConstruCPinturas
-</footer>
-
-<script src="app.js"></script>
-
+    <!-- JS personalizado -->
+    <script src="js/app.js"></script>
 </body>
 </html>
-
