@@ -1,0 +1,43 @@
+/* Archivo: css/styles.css */
+
+/* Reset de tipografía y body */
+body {
+  @apply font-sans antialiased text-brandDark bg-backgroundLight;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-display;
+}
+
+/* Estilos para hero */
+section#inicio h2 {
+  @apply text-white drop-shadow-2xl;
+}
+section#inicio p {
+  @apply text-gray-200;
+}
+
+/* Botones */
+button, a.bg-primary {
+  @apply transition-all duration-300;
+}
+
+/* Color swatches */
+.color-swatch {
+  @apply w-12 h-12 rounded-full cursor-pointer transition-transform hover:scale-125 hover:z-10 shadow-md;
+}
+
+/* Tarjetas de productos */
+section#productos .bg-white {
+  @apply border border-gray-100 dark:border-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all;
+}
+
+/* Servicios */
+section#servicios .group {
+  @apply bg-gray-50 dark:bg-white/5 rounded-2xl border border-transparent hover:border-primary/20 hover:shadow-xl transition-all duration-500;
+}
+
+/* Footer */
+footer {
+  @apply text-gray-400 bg-brandDark;
+}
