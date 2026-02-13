@@ -1,111 +1,172 @@
 <!DOCTYPE html>
 <html lang="es" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConstruCPinturas C.A. | Mezcla de Colores Personalizada</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConstruCPinturas C.A. | Venta Nacional de Pinturas</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    <!-- Configuración Tailwind -->
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f9c806",
-                        "brand-dark": "#1e293b",
-                        "background-light": "#ffffff",
-                        "background-dark": "#0f172a",
-                    },
-                    fontFamily: {
-                        "sans": ["Inter", "sans-serif"],
-                        "display": ["Montserrat", "sans-serif"]
-                    },
-                },
-            },
-        }
-    </script>
+<script>
+ tailwind.config = {
+  darkMode: "class",
+  theme: {
+   extend: {
+    colors: {
+     primary: "#f9c806",
+     brandDark: "#1e293b",
+     backgroundLight: "#ffffff",
+     backgroundDark: "#0f172a",
+    },
+    fontFamily: {
+     sans: ["Inter", "sans-serif"],
+     display: ["Montserrat", "sans-serif"]
+    }
+   }
+  }
+ }
+</script>
 
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="styles.css">
-
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark:bg-background-dark dark:text-gray-100">
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 glass-nav border-b border-gray-100 dark:border-gray-800 dark:bg-background-dark/90">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-24">
-            <div class="flex items-center gap-3">
-                <div class="bg-primary p-2.5 rounded-xl shadow-sm">
-                    <span class="material-symbols-outlined text-background-dark font-bold block">format_paint</span>
-                </div>
-                <h2 class="text-2xl font-800 tracking-tighter uppercase dark:text-white">ConstruC<span class="text-primary">Pinturas</span></h2>
-            </div>
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#inicio">Inicio</a>
-                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#nosotros">Nosotros</a>
-                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#productos">Productos</a>
-                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#servicios">Servicios</a>
-                <a class="text-sm font-bold tracking-wide hover:text-primary transition-colors uppercase" href="#mezcla">Mezcla Personalizada</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <button class="bg-brand-dark text-white dark:bg-primary dark:text-brand-dark px-7 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all hover:shadow-lg hover:-translate-y-0.5">
-                    Ver Catálogo
-                </button>
-            </div>
-        </div>
-    </header>
+<body class="dark:bg-backgroundDark dark:text-gray-100 font-sans">
 
-    <!-- Main -->
-    <main>
-        <!-- Hero -->
-        <section id="inicio" class="relative h-screen flex items-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 hero-gradient z-10"></div>
-                <img src="assets/img/hero.jpg" alt="Imagen genérica Hero" class="w-full h-full object-cover scale-105">
-            </div>
-            <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-                <div class="max-w-3xl">
-                    <span class="inline-flex items-center gap-2 py-2 px-4 bg-primary text-brand-dark rounded-full text-xs font-800 uppercase tracking-[0.2em] mb-8 shadow-xl">
-                        Calidad Profesional Garantizada
-                    </span>
-                    <h1 class="text-6xl lg:text-8xl font-800 text-white leading-none mb-8 tracking-tight">
-                        Con Color <br/><span class="text-primary italic">Todo es Mejor</span>
-                    </h1>
-                    <p class="text-xl text-gray-200 mb-12 leading-relaxed max-w-xl font-light">
-                        Fabricación y distribución de pinturas de alta gama en Valencia. Protegemos y embellecemos sus espacios con tecnología de recubrimiento de vanguardia.
-                    </p>
-                    <div class="flex flex-wrap gap-5">
-                        <button class="bg-primary text-brand-dark px-10 py-5 rounded-2xl font-800 text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-primary/40 transition-all hover:-translate-y-1">
-                            Explorar Productos
-                        </button>
-                        <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-800 text-sm uppercase tracking-widest hover:bg-white/20 transition-all">
-                            Nuestra Fábrica
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
+ <div class="max-w-7xl mx-auto px-6 lg:px-10 flex justify-between items-center h-20">
+  <div class="flex items-center gap-3">
+   <div class="bg-primary p-2 rounded-xl">
+    <span class="material-symbols-outlined text-brandDark">format_paint</span>
+   </div>
+   <h1 class="text-xl font-bold uppercase">ConstruC<span class="text-primary">Pinturas</span></h1>
+  </div>
 
-        <!-- Secciones de Nosotros, Productos, Servicios y Mezcla Personalizada se pueden agregar aquí siguiendo la misma estructura -->
+  <nav class="hidden md:flex gap-8 font-semibold text-sm uppercase">
+   <a href="#inicio">Inicio</a>
+   <a href="#nosotros">Nosotros</a>
+   <a href="#productos">Productos</a>
+   <a href="#servicios">Servicios</a>
+   <a href="#mezcla">Colores</a>
+   <a href="#contacto">Contacto</a>
+  </nav>
 
-    </main>
+  <a href="#productos" class="bg-primary px-5 py-2 rounded-full text-sm font-bold">Comprar</a>
+ </div>
+</header>
 
-    <!-- Footer -->
-    <footer class="bg-brand-dark pt-24 pb-12 text-gray-400">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10">
-            <p class="text-[10px] font-medium tracking-widest uppercase">© 2024 ConstruCPinturas C.A. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+<!-- HERO -->
+<section id="inicio" class="relative h-screen flex items-center justify-center bg-gray-900">
+ <img src="assets/img/hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70">
+ <div class="relative text-center text-white px-6">
+  <h2 class="text-5xl md:text-7xl font-bold mb-6">Con Color <span class="text-primary">Todo es Mejor</span></h2>
+  <p class="text-xl mb-8">Pinturas profesionales para hogares, obras y empresas en todo el país.</p>
+  <a href="#productos" class="bg-primary px-8 py-4 rounded-xl font-bold">Ver Productos</a>
+ </div>
+</section>
 
-    <!-- JS personalizado -->
-    <script src="app.js"></script>
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-24 bg-white">
+ <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <img src="assets/img/team.jpg" class="rounded-2xl shadow-xl">
+  <div>
+   <h3 class="text-4xl font-bold mb-4">Experiencia y calidad en cada pintura</h3>
+   <p class="text-gray-600 mb-4">Fabricamos y distribuimos pinturas con tecnología moderna para asegurar resistencia, cobertura y acabados profesionales.</p>
+   <p class="text-gray-600">Atendemos hogares, constructoras, industrias y distribuidores en todo el país.</p>
+  </div>
+ </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="py-24 bg-gray-50">
+ <div class="max-w-7xl mx-auto px-6">
+  <h3 class="text-4xl font-bold text-center mb-14">Nuestros Productos</h3>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+   <div class="bg-white rounded-2xl shadow hover:shadow-xl transition">
+    <img src="assets/img/producto1.jpg" class="h-60 w-full object-cover rounded-t-2xl">
+    <div class="p-6">
+     <h4 class="font-bold text-xl mb-2">Pinturas Arquitectónicas</h4>
+     <p class="text-gray-500 mb-4">Interior y exterior con alta cobertura y duración.</p>
+     <a href="#contacto" class="bg-primary px-4 py-2 rounded-lg font-bold">Cotizar</a>
+    </div>
+   </div>
+
+   <div class="bg-white rounded-2xl shadow hover:shadow-xl transition">
+    <img src="assets/img/producto2.jpg" class="h-60 w-full object-cover rounded-t-2xl">
+    <div class="p-6">
+     <h4 class="font-bold text-xl mb-2">Recubrimientos Industriales</h4>
+     <p class="text-gray-500 mb-4">Protección para ambientes de alto desgaste.</p>
+     <a href="#contacto" class="bg-primary px-4 py-2 rounded-lg font-bold">Cotizar</a>
+    </div>
+   </div>
+
+   <div class="bg-white rounded-2xl shadow hover:shadow-xl transition">
+    <img src="assets/img/producto1.jpg" class="h-60 w-full object-cover rounded-t-2xl">
+    <div class="p-6">
+     <h4 class="font-bold text-xl mb-2">Esmaltes y Acabados</h4>
+     <p class="text-gray-500 mb-4">Protección y brillo para metal y madera.</p>
+     <a href="#contacto" class="bg-primary px-4 py-2 rounded-lg font-bold">Cotizar</a>
+    </div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 bg-white">
+ <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div class="space-y-6">
+   <h3 class="text-4xl font-bold">Servicios Profesionales</h3>
+   <p class="text-gray-600">Asesoramos en selección de pintura, aplicación y mantenimiento.</p>
+   <ul class="space-y-3 text-gray-600">
+    <li>✔ Igualación de colores personalizada</li>
+    <li>✔ Asesoría técnica en obra</li>
+    <li>✔ Entregas nacionales</li>
+   </ul>
+  </div>
+  <img src="assets/img/servicio1.jpg" class="rounded-2xl shadow-xl">
+ </div>
+</section>
+
+<!-- COLORES -->
+<section id="mezcla" class="py-24 bg-gray-100 text-center">
+ <div class="max-w-4xl mx-auto px-6">
+  <h3 class="text-4xl font-bold mb-6">Laboratorio de Colores</h3>
+  <p class="text-gray-600 mb-10">Creamos el tono exacto que necesitas.</p>
+
+  <div class="flex justify-center gap-4 flex-wrap">
+   <div class="w-12 h-12 rounded-full bg-yellow-400"></div>
+   <div class="w-12 h-12 rounded-full bg-red-500"></div>
+   <div class="w-12 h-12 rounded-full bg-blue-500"></div>
+   <div class="w-12 h-12 rounded-full bg-green-500"></div>
+   <div class="w-12 h-12 rounded-full bg-purple-500"></div>
+   <div class="w-12 h-12 rounded-full bg-pink-500"></div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 bg-white text-center">
+ <div class="max-w-3xl mx-auto px-6">
+  <h3 class="text-4xl font-bold mb-6">Contacto y Distribución</h3>
+  <p class="text-gray-600 mb-8">Solicita cotizaciones o conviértete en distribuidor.</p>
+  <a href="https://wa.me/580000000000" class="bg-green-500 text-white px-8 py-4 rounded-xl font-bold">WhatsApp</a>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-brandDark text-gray-400 py-10 text-center">
+ <p>© 2026 ConstruCPinturas C.A. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
